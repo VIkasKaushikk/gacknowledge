@@ -4,6 +4,7 @@ const path = require('path');
 const port = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
+//    console.log(req.url);
     let filePath = path.join(
         __dirname,
         "public",
@@ -31,8 +32,8 @@ const server = http.createServer((req, res) => {
             break;
     }
 
-    console.log(`File path: ${filePath}`);
-    console.log(`Content-Type: ${contentType}`)
+   // console.log(`File path: ${filePath}`);
+    //console.log(`Content-Type: ${contentType}`)
 
     res.writeHead(200, {'Content-Type': contentType});
 
